@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/15 13:03:25 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/15 13:13:46 by pcervant         ###   ########.fr       */
+/*   Created: 2024/06/15 13:40:12 by pcervant          #+#    #+#             */
+/*   Updated: 2024/06/15 13:52:09 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*strchr(const char *s, int c)
 {
 	size_t			i;
-	size_t			tam;
 	unsigned char	*u;
-	unsigned char	*s;
 
 	i = 0;
-	tam = 0;
-	u = dst;
-	s = src;
-	while (s[tam] != '\0')
+	u = s;
+	while ((u[i] != '\0') && (u[i] != c))
 	{
-		++tam;
+		++i;
 	}
-	if (tam == 0)
-		return (tam);
-	while (i < size)
-	{
-		u[i] = ((unsigned char *)src);
-		i++;
-	}
-	u[i] = '\0';
-	return (tam);
+	return (u[i]);
 }
