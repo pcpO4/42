@@ -6,16 +6,15 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 11:18:22 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 11:57:15 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:17:34 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-size_t	calcular(const char *c)
+size_t calcular(const char *c)
 {
-	size_t	tam;
+	size_t tam;
 
 	tam = 0;
 	while (c[tam] != '\0')
@@ -23,11 +22,11 @@ size_t	calcular(const char *c)
 	return (tam);
 }
 
-char	*ft_strdup(const char *s)
+char *ft_strdup(const char *s)
 {
-	size_t	size;
-	size_t	i;
-	char	*str;
+	size_t size;
+	size_t i;
+	char *str;
 
 	size = calcular(s) + 1;
 	i = 0;

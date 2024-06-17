@@ -6,13 +6,13 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 13:38:27 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/15 13:39:51 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:24:27 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "libft.h"
 
-int	ft_tolower(int c)
+int ft_tolower(int c)
 {
 	if (65 <= c <= 90)
 		return (c + 32);

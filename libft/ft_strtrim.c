@@ -6,16 +6,16 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 12:41:06 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 13:27:11 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:24:17 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	comprobar(char c, char const *set)
+int comprobar(char c, char const *set)
 {
-	size_t	i;
-	size_t	len;
+	size_t i;
+	size_t len;
 
 	len = ft_strlen(set);
 	i = 0;
@@ -28,12 +28,12 @@ int	comprobar(char c, char const *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	size_t	end;
-	size_t	start;
-	size_t	i;
-	char	*str;
+	size_t end;
+	size_t start;
+	size_t i;
+	char *str;
 
 	if ((!s1) || (!set))
 		return (NULL);

@@ -6,13 +6,12 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 13:29:21 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 13:33:35 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:17:23 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	**ft_split(char const *s, char c)
+char **ft_split(char const *s, char c)
 {
-	
 }

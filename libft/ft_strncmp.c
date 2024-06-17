@@ -6,17 +6,17 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 13:54:25 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 10:02:47 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:24:02 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-int	strncmp(const char *s1, const char *s2, size_t n)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*u;
-	unsigned char	*s;
+	size_t i;
+	unsigned char *u;
+	unsigned char *s;
 
 	i = 0;
 	u = s1;

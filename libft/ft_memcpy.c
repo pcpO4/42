@@ -6,19 +6,17 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 11:55:14 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/15 12:33:24 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:17:07 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*str;
-	unsigned char	*u;
+	size_t i;
+	unsigned char *str;
+	unsigned char *u;
 
 	i = 0;
 	str = dest;
@@ -32,9 +30,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 /*int main()
 {
-    char b[] = "aaaaa";
-    char c[] = "bbbb";
-    
-    write(1, ft_memcpy(b, c, 2), 5);
-    write(1, memcpy(b, c, 2), 5);
+	char b[] = "aaaaa";
+	char c[] = "bbbb";
+
+	write(1, ft_memcpy(b, c, 2), 5);
+	write(1, memcpy(b, c, 2), 5);
 }*/

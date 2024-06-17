@@ -6,16 +6,16 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 20:12:13 by pcervant          #+#    #+#             */
-/*   Updated: 2024/05/11 20:53:37 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:17:16 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void *ft_memset(void *b, int c, size_t len)
 {
-	size_t			i;
-	unsigned char	*str;
+	size_t i;
+	unsigned char *str;
 
 	i = 0;
 	str = b;

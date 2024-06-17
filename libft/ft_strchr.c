@@ -6,16 +6,16 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 13:40:12 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/15 13:52:09 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 21:07:20 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char	*strchr(const char *s, int c)
+char *ft_strchr(const char *s, int c)
 {
-	size_t			i;
-	unsigned char	*u;
+	size_t i;
+	unsigned char *u;
 
 	i = 0;
 	u = s;

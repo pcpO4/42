@@ -6,18 +6,16 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 21:08:53 by pcervant          #+#    #+#             */
-/*   Updated: 2024/05/11 21:17:32 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:16:16 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-void	*ft_bzero(void *b, size_t len)
+void *ft_bzero(void *b, size_t len)
 {
-	size_t	i;
-	char	*str;
+	size_t i;
+	char *str;
 
 	i = 0;
 	str = b;

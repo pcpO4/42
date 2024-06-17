@@ -6,17 +6,17 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 10:50:28 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 11:03:50 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:16:10 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	atoi(const char *nptr)
+int ft_atoi(const char *nptr)
 {
-	int	signo;
-	int	i;
-	int	valor;
+	int signo;
+	int i;
+	int valor;
 
 	signo = 1;
 	i = 0;

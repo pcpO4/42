@@ -6,17 +6,15 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 18:43:15 by pcervant          #+#    #+#             */
-/*   Updated: 2024/05/11 19:31:49 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:16:30 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-//include libft
+#include "libft.h"
 
-int	ft_isalnum(int c)
+int ft_isalnum(int c)
 {
-	if(ft_isdigit(c) || ft_isalpha(c))
+	if (ft_isdigit(c) || ft_isalpha(c))
 	{
 		return (1);
 	}

@@ -6,16 +6,16 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 11:04:53 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 11:16:40 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:16:20 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	*calloc(size_t nmemb, size_t size)
+void *ft_calloc(size_t nmemb, size_t size)
 {
-	void	*s;
-	size_t	total;
+	void *s;
+	size_t total;
 
 	total = (nmemb * size);
 	if (total == 0)

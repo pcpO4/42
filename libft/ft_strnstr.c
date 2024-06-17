@@ -6,16 +6,16 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 10:20:51 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 10:49:53 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:24:06 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char	*strnstr(const char *big, const char *little, size_t len)
+char *ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t			litt;
-	unsigned char	*puntero;
+	size_t litt;
+	unsigned char *puntero;
 
 	litt = calcular(little);
 	if (litt == 0)
@@ -24,10 +24,10 @@ char	*strnstr(const char *big, const char *little, size_t len)
 	return (puntero);
 }
 
-char	*buscar(const char *big, const char *little, size_t len, size_t litt)
+char *buscar(const char *big, const char *little, size_t len, size_t litt)
 {
-	size_t			i;
-	size_t			j;
+	size_t i;
+	size_t j;
 
 	i = 0;
 	while (i < len)
@@ -42,9 +42,9 @@ char	*buscar(const char *big, const char *little, size_t len, size_t litt)
 	return (NULL);
 }
 
-size_t	calcular(char *c)
+size_t calcular(char *c)
 {
-	size_t	tam;
+	size_t tam;
 
 	tam = 0;
 	while (c[tam] != '\0')

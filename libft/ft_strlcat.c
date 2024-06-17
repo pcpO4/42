@@ -6,20 +6,19 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 13:14:14 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/15 13:28:38 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:23:49 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t			i;
-	size_t			tam1;
-	size_t			tam2;
-	unsigned char	*u;
-	unsigned char	*s;
+	size_t i;
+	size_t tam1;
+	size_t tam2;
+	unsigned char *u;
+	unsigned char *s;
 
 	i = 0;
 	tam1 = calcular(src);
@@ -37,9 +36,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (tam2);
 }
 
-size_t	calcular(char *c)
+size_t calcular(char *c)
 {
-	size_t	tam;
+	size_t tam;
 
 	tam = 0;
 	while (c[tam] != '\0')

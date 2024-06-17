@@ -6,15 +6,15 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 12:03:39 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 12:25:14 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:24:22 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-size_t	calcular(const char *c, size_t start)
+size_t calcular(const char *c, size_t start)
 {
-	size_t	tam;
+	size_t tam;
 
 	tam = 0;
 	while (c[start + tam] != '\0')
@@ -22,16 +22,16 @@ size_t	calcular(const char *c, size_t start)
 	return (tam);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
-	size_t	i;
-	size_t	sublen;
+	char *str;
+	size_t i;
+	size_t sublen;
 
 	sublen = calcular(s, start);
 	if (sublen < len)
 		sublen = len;
-	str = malloc((sublen +1) * sizeof(char));
+	str = malloc((sublen + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	i = 0;

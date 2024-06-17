@@ -6,18 +6,18 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 13:03:25 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/15 13:13:46 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:23:52 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t			i;
-	size_t			tam;
-	unsigned char	*u;
-	unsigned char	*s;
+	size_t i;
+	size_t tam;
+	unsigned char *u;
+	unsigned char *s;
 
 	i = 0;
 	tam = 0;
