@@ -6,22 +6,39 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 13:40:12 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 21:07:20 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/24 11:35:22 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
-	unsigned char *u;
+	size_t			i;
+	unsigned char	ch;
 
 	i = 0;
-	u = s;
-	while ((u[i] != '\0') && (u[i] != c))
+	ch = c;
+	if (ch == '\0')
 	{
-		++i;
+		i = ft_strlen(s);
+		return ((char *)s + i++);
 	}
-	return (u[i]);
+	while (s[i])
+	{
+		if (s[i] == ch)
+			return ((char *)s + i);
+		i++;
+	}
+	return (NULL);
 }
+/*#include <stdio.h>
+
+int main()
+{
+	int c = 0;
+	char *str = "hoBa";
+	char *ch;
+	printf("%s", ft_strchr(str, c));
+	
+}*/

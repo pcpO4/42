@@ -6,15 +6,15 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 19:50:30 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 20:23:57 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/23 12:08:25 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!s)

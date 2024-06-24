@@ -6,47 +6,29 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 12:25:39 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 20:23:44 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/24 12:07:54 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t calcular(const char *c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t tam;
+	char	*str;
+	size_t	i;
 
-	tam = 0;
-	while (c[tam] != '\0')
-		++tam;
-	return (tam);
-}
-
-char *ft_strjoin(char const *s1, char const *s2)
-{
-	char *str;
-	size_t size_1;
-	size_t size_2;
-	size_t i;
-	size_t total;
-
-	size_1 = calcular(s1);
-	size_2 = calcular(s2);
-	total = size_1 * size_2;
-	if (total == 0)
-		return (NULL);
-	str = malloc((total + 1) * sizeof(char));
-	if (str == NULL)
-		return (NULL);
+	str = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	i = 0;
-	while (i < total)
+	while (i < ft_strlen(s1))
 	{
-		if (i < size_1)
-			str[i] = s1[i];
-		if (i >= size_1)
-			str[i] = s2[i - size_1];
-		i++;
+		str[i] = s1[i];
+		++i;
 	}
-	str[total] = '\0';
+	while (i < (ft_strlen(s1) + ft_strlen(s2)))
+	{
+		str[i] = s2[i - ft_strlen(s1)];
+		++i;
+	}
+	str[i] = '\0';
 	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 13:29:21 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/18 13:25:00 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/24 12:42:21 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static size_t	contar(char const *s, char c)
 
 	cnt = 0;
 	if (!*s)
-		return (NULL);
+		return (0);
 	while (*s)
 	{
 		while (*s == c)
@@ -55,6 +55,6 @@ char	**ft_split(char const *s, char c)
 			s += cnt;
 		}
 	}
-	matriz[i] = '\0';
+	matriz[i] = NULL;
 	return (matriz);
 }

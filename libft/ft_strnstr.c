@@ -6,48 +6,33 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 10:20:51 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 20:24:06 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/23 11:34:29 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t litt;
-	unsigned char *puntero;
+	size_t			litt;
+	size_t			i;
+	size_t			j;
+	char			*puntero;
 
-	litt = calcular(little);
-	if (litt == 0)
-		return (big);
-	puntero = buscar(big, little, len, litt);
-	return (puntero);
-}
-
-char *buscar(const char *big, const char *little, size_t len, size_t litt)
-{
-	size_t i;
-	size_t j;
-
+	litt = ft_strlen(little);
+	puntero = (char *)big;
+	if (litt == 0 || big == little)
+		return (puntero);
 	i = 0;
-	while (i < len)
+	while (puntero[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (j < litt && big[i + j] == little[j])
-			j++;
+		while (puntero[i + j] != '\0' && little[j] != '\0'
+			&& puntero[i + j] == little[j] && i + j < len)
+			++j;
 		if (j == litt)
-			return ((char *)&big[i]);
+			return (puntero + i);
 		++i;
 	}
 	return (NULL);
-}
-
-size_t calcular(char *c)
-{
-	size_t tam;
-
-	tam = 0;
-	while (c[tam] != '\0')
-		++tam;
-	return (tam);
 }

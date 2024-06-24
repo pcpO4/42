@@ -6,25 +6,15 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 21:08:53 by pcervant          #+#    #+#             */
-/*   Updated: 2024/06/16 20:16:16 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/06/23 12:35:56 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_bzero(void *b, size_t len)
+void	ft_bzero(void *b, size_t len)
 {
-	size_t i;
-	char *str;
-
-	i = 0;
-	str = b;
-	while (i < len)
-	{
-		str[i] = 0;
-		i++;
-	}
-	return (str);
+	ft_memset(b, 0, len);
 }
 
 /*int		main()
